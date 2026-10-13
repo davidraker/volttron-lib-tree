@@ -29,9 +29,9 @@ from importlib.metadata import distribution, PackageNotFoundError
 
 try:
     distribution('volttron-core')
-    from volttron.client.known_identities import CONFIGURATION_STORE
+    CONFIGURATION_STORE = 'platform.config_store'
 except PackageNotFoundError:
-    from volttron.platform.agent.known_identities import CONFIGURATION_STORE
+    CONFIGURATION_STORE = 'config.store'
 
 from .topic import TopicTree, TopicNode
 
