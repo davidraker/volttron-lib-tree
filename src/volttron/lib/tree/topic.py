@@ -38,9 +38,9 @@ from treelib.exceptions import DuplicatedNodeIdError, NodeIDAbsentError
 
 try:
     distribution('volttron-core')
-    from volttron.client.known_identities import CONFIGURATION_STORE
+    CONFIGURATION_STORE = 'platform.config_store'
 except PackageNotFoundError:
-    from volttron.platform.agent.known_identities import CONFIGURATION_STORE
+    CONFIGURATION_STORE = 'config.store'
 
 _log = logging.getLogger(__name__)
 
